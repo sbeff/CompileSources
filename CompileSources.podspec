@@ -11,9 +11,9 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '12.0'
 
-#  s.resource_bundle = { 'RustSources' => 'hello_cocoapods' }
-
-#  s.script_phase = { :name => 'Compile Rust binary', :script => '(cd hello_cocoapods && cargo lipo --release)', :execution_position => :before_compile }
+  s.script_phases = [
+    { :name => 'Compile Rust binary', :script => '(cd $PODS_TARGET_SRCROOT/hello_cocoapods && ~/.cargo/bin/cargo lipo --release -vv)', :execution_position => :before_compile }
+  ]
 
   s.source_files = '**/*.{swift,h}'
   s.library = 'resolv'
