@@ -1,0 +1,9 @@
+[package]
+name = "hello_cocoapods"
+version = "0.1.0"
+authors = ["Emanuele Beffa <emanuele.beffa@gmail.com>"]
+edition = "2018"
+
+[lib]
+name = "hello_cocoapods"
+crate-type = ["staticlib"]
