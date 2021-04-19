@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 #    { :name => 'Compile Rust binary', :script => 'echo "---------------------------";printenv;(cd CompileSources/hello_cocoapods && cargo lipo --release);echo `pwd`;sleep 0s;(cd $PODS_TARGET_SRCROOT/hello_cocoapods && ~/.cargo/bin/cargo lipo --release -vv);echo "---------------------------";sleep 1s;ls -R ;sleep 0s;', :execution_position => :before_compile }
 #  ]
   s.script_phases = [
-    { :name => 'Compile Rust binary', :script => 'echo "---------------------------"echo `pwd`;sleep 100s;', :execution_position => :before_compile }
+    { :name => 'Compile Rust binary', :script => 'echo "---------------------------"echo `pwd`;sleep 0s;', :execution_position => :before_compile }
   ]
   s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)", "LIBRARY_SEARCH_PATHS" => "$(PODS_ROOT)" }
 
