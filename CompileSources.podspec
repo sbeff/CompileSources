@@ -10,14 +10,14 @@ Pod::Spec.new do |s|
   s.source = { :git => 'https://github.com/sbeff/CompileSources.git', :tag => s.version.to_s }
   s.swift_version = '5.3'
 
-  s.library = 'resolv'
+#   s.library = 'resolv'
+
   s.vendored_libraries = 'libHello_cocoapods.a'
 
   s.ios.deployment_target = '12.0'
 
 #  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)", "LIBRARY_SEARCH_PATHS" => "$(PODS_ROOT)" }
 
-  s.source_files = 'CompileSources/*.{swift,h}'
-  s.public_header_files = 'hello_cocoapods.h'
+  s.source_files = '**/*.{swift,h}'
 
 end
