@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '12.0'
 
-#  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)", "LIBRARY_SEARCH_PATHS" => "$(PODS_ROOT)" }
+  s.xcconfig = { "LIBRARY_SEARCH_PATHS" => "$(PROJECT_DIR)" }
 
   s.source_files = '**/*.{swift,h}'
 
