@@ -15,10 +15,9 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '12.0'
 
-#  s.resource = 'libHello_cocoapods.a'
+#  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)", "LIBRARY_SEARCH_PATHS" => "$(PODS_ROOT)" }
 
-  s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(PODS_ROOT)", "LIBRARY_SEARCH_PATHS" => "$(PODS_ROOT)" }
+  s.source_files = 'CompileSources/*.{swift,h}'
+  s.public_header_files = 'hello_cocoapods.h'
 
-  s.source_files = '**/*.{swift,h}'
-  s.public_header_files = '**/*.h'
 end
